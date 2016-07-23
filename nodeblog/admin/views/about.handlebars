@@ -1,0 +1,35 @@
+{{>nav}}
+<div class="row ">
+	<div id="about" class="" style="margin-top:50px;">
+		<div class="container">
+			<h4>Edit Bio</h4>
+
+		    <form class="col s12" action="/update/about" method="post" enctype='multipart/form-data'>
+		      <div class="row">
+		        <div class="input-field col s12 center-align" >
+		          <textarea  id="about" class=" materialize-textarea" name="about" method="post">{{about}}</textarea>
+		          <label for="about">About</label>
+		        </div>
+		      </div>
+		      <div class="file-field input-field">
+			      <div class="btn" style="background-color:#0d47a1;">
+			        <span>File</span>
+			        <input type="file">
+			      </div>
+			      <div class="file-path-wrapper">
+			        <input type="file" name="avatar" >
+			      </div>
+			    </div>
+		      <div class="center-align">
+		     	 <button class="btn waves-effect waves-light" type="submit" style="background-color:#0d47a1">Submit</button>
+			  </div>
+		    </form>
+		    <div class="row col s12" >
+		    	<h4>Your profile picture</h4>
+
+		    	<img class="responsive-img circle" style="margin-top:20px;height:200px;"src="{{img}}">
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>

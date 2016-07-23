@@ -1,0 +1,104 @@
+.top-nav {
+    background-color: #0d47a1;
+    height: 110px;
+}
+
+#logo-container {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo-size {
+    height: : 110px;
+}
+
+.avatar {
+    margin-top: 20px;
+    height: 100px;
+}
+
+.myavatar {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #18ffff;
+    background-size: auto;
+}
+
+body {
+    background-color: #eceff1;
+    font-family: 'Raleway', sans-serif;
+}
+
+.input-field input:focus + label {
+    color: #0d47a1 !important;
+}
+
+.input-field textarea:focus + label {
+    color: #0d47a1 !important;
+}
+
+
+/* label underline focus color */
+
+.row .input-field input:focus {
+    border-bottom: 1px solid #0d47a1 !important;
+    box-shadow: 0 1px 0 0 #0d47a1 !important
+}
+
+.row .input-field textarea:focus {
+    border-bottom: 1px solid #0d47a1 !important;
+    box-shadow: 0 1px 0 0 #0d47a1 !important
+}
+
+.social-icons {
+    font-size: 30px
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1260px) {
+    .toast {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (min-width: 1261px) {
+    .toast {
+        width: 50%;
+        border-radius: 0;
+        margin-right: 25%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1260px) {
+    #toast-container {
+        min-width: 100%;
+        bottom: 0%;
+        top: 90%;
+        right: 0%;
+        left: 0%;
+    }
+}
+
+@media only screen and (min-width: 1261px) {
+    #toast-container {
+        min-width: 100%;
+        bottom: 0%;
+        top: 90%;
+        right: 0%;
+        left: 0%;
+    }
+}
+
+
+/*#contact{
+	background-image: url('/images/contact.jpg');
+	background-size:  100%;
+	background-repeat: no-repeat;
+}*/
+
+
+/*form {
+    width: 300px;
+    margin: 0 auto;
+}*/

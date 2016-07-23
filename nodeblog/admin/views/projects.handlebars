@@ -1,0 +1,66 @@
+{{>nav}}
+<div class="row" style="margin-top:50px">
+	<div class="container">
+		<h4>Add New Project</h4>
+    <form class="col s12" method="post" {{#if edit}}action="/update/projects/edit/{{project.id}}"{{else}} action="/update/projects/"{{/if}}>
+      <div class="row">
+        <div class="input-field col s6">
+          <textarea id="title" class="materialize-textarea" name="title">{{project.title}}</textarea>
+          <label for="title">Title</label>
+        </div>
+      
+        <div class="input-field col s6">
+          <textarea id="links" class="materialize-textarea" name="links">{{project.links}}</textarea>
+          <label for="links">Links</label>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="input-field col s6">
+          <input value="{{project.skills}}" id="priority" type="text" name="skills" class="validate">
+          <label for="skills">Skills</label>
+        </div>
+        <div class="input-field col s6">
+          <input value="{{project.priority}}" id="priority" type="number" name="priority" class="validate">
+          <label for="priority">Priority</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="description" class="materialize-textarea" name="description">{{project.description}}</textarea>
+          <label for="description">Description</label>
+        </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s6">
+          <input value="{{project.company}}" id="company" type="text" name="company" class="validate">
+          <label for="company">company</label>
+        </div>
+      </div>
+       <div class="center-align">
+		      <button class="btn waves-effect waves-light" type="submit" style="background-color:#0d47a1">Submit</button>
+	   </div>
+    </form>
+    </div>
+  </div>
+  <div class="row " >
+  	<div class="container center-align">
+  		<h4>Your Projects</h4>
+  	<ul class="collection ">
+  		  {{#each projects}}
+  		  	<li class="collection-item left-align">
+  		  			<span style="float:right"><a class="confirm" onclick="return confirm('Do you want to delete?');" href="/update/projects/delete/{{id}}" >delete</a></span><br>
+  		  			<span style="float:right"><a href="/update/projects/edit/{{id}}" onclick="editProject('{{id}}')">edit</a></span><br>
+              <span style="float:right"><h3>{{priority}}</h3></span>
+				  	<h3>{{title}} </h3>
+				  	<p>{{description}}</p>
+            <p><b> Company :</b> {{company}}</p>
+            <p><b>Technologies and Skills :</b> {{skills}}</p>
+            <p><b>Links :</b> {{links}}</p>
+            
+			</li>	  	
+  		  {{/each}}
+    </ul>
+    </div>
+  </div>
+  

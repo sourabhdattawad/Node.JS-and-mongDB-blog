@@ -1,0 +1,62 @@
+<nav class="top-nav">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large  top-nav full  "><i class="material-icons">menu</i></a>
+      <span style="float:right">
+      <a href="/" ><i class="material-icons">home</i></a>
+    </span>
+    </div>
+  </div>
+</nav>
+
+<ul id="nav-mobile" class="side-nav ">
+  <li class="bold"><h3>Categories</h3></li>
+  <li class="search">
+    <nav>
+      <div class="nav-wrapper">
+        <form>
+          <div class="input-field">
+            <input placeholder="Search"id="search" type="search" style="background-color:white;" required >
+            <label for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </li>
+  {{#each category}}
+  <li class="bold"><a href="/blog/{{name}}/" class="waves-effect waves-orange">{{name}}</a></li>
+  {{/each}}
+
+  
+</ul>
+<h3 class="container left-align " style="margin-top:50px; margin-bottom:20px">Blogs | {{catName}}</h3>
+ {{!-- <ul class="collection container">
+ 	{{#each blog}}
+      <li class="collection-item">
+      	<div>
+      		<p>{{title}}
+      		</p>
+	    </div>
+  	  </li>
+      {{/each}}
+
+ </ul> --}}
+{{#each blog}}
+ <div class="row">
+      <div class="container ">
+        <div class="card-panel white">
+        	<h4 class="left-align">{{title}}</h4>
+          <p class="blue-text">{{date}}</p>
+          <span class="black-text">
+          	{{{description}}}
+          </span>
+          <div class="row center-align">
+          	<a class="waves-effect waves-orange btn-large" style="background-color:#e0e0e0 ;color:black;" href="/blog/{{category}}/{{title}}">Read</a>
+          </div>
+          
+        </div>
+      </div>
+ </div>
+ {{/each}}
+

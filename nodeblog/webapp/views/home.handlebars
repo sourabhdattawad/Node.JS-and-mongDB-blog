@@ -1,0 +1,159 @@
+{{> nav}}
+<div class="row" id="about" >
+	<div class="container" >
+		<div class="row">
+      		<div class="center-align">
+      			<h4 class="left-align" style="margin-top:50px;">About</h4>
+      			<hr>
+       		   <div class="card-panel ">
+        		<img class="responsive-img " src="{{user.img}}" style="height:200px;">
+        		<h3 class="myname" style="color:#FB8C00">Sourabh Dattawad</h3>
+        		<span class="black-text">{{user.about}}
+        		</span>
+        	</div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div class="row" id="opensource" >
+	<div class="container" >
+		<div class="row">
+      		<div class="center-align">
+       		   <div class="">
+        		<h4 class="left-align">Open Source & Projects</h4>
+        		<hr>
+
+        		<ul class="collection ">
+		  		  {{#each projects}}
+		  		  	<li class="collection-item left-align">
+						  	<h4>{{title}} </h4>
+						  	<p><b>Company : </b>{{company}}</p>
+						  	<p>{{description}}</p>
+						  	<p><b>Technologies and Skills : </b>{{skills}}</p>
+
+						  	<p><b>Links : </b>{{links}}</p>
+					</li>	  	
+		  		  {{/each}}
+	    		</ul>
+        	</div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row" class="">
+	<div id="modal1" class="modal">
+    <div class="modal-content center-align">
+      <h4>Your email is required</h4>
+      <p>You will be redirected to download link</p>
+    </div>
+    <div class="row">
+    <form class="col s12">
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="email" type="email" class="validate" required>
+	          <label for="email" data-error="wrong" data-success="right">Email</label>
+	        </div>
+	      </div>
+	      <p class="center-align">
+	        <button class="btn-large waves-effect waves-orange " type="submit"  style="background-color:#e0e0e0 ;color:black;" onclick="resumeRedirect();">Submit
+	    		<i class="material-icons right">send</i>
+	 	   </button>
+     	</p>
+     </form>
+  	</div>
+  </div>     
+  <div>
+</div>
+
+<div class="row" id="contact">
+	<div class="container" >
+		<div class="row">
+      		<div class="center-align">
+      			<h4 class="left-align">Contact Me</h4>
+        		<hr>
+        		<div class="card-panel ">
+        			<div class="row">
+        				<form class="col s12">
+        					<div class="row">
+        						<div class="input-field col s6 ">
+        							<input  id="name" type="text" class="validate" required>
+        							<label class="active left-align" for="name" >First Name</label>
+        						</div>
+        						<div class="input-field col s6 ">
+        							<input  id="useremail" type="email" class="validate" required>
+        							<label class="active left-align" for="email" >Email</label>
+        						</div>
+        						<div class="input-field col s12">
+        							<textarea id="message" class="materialize-textarea" required>
+        							</textarea>
+        							<label for="message">Message</label>
+        						</div>
+
+        						<div class="col c12">
+        							<h5>Lets talk about ?</h5>
+        							<p>
+        								<input class="checkbox-orange"type="checkbox" id="job" value="job"/>
+        								<label for="job">Job</label>
+        							</p>
+        							<p>
+        								<input type="checkbox" id="project" value="project" />
+        								<label for="project">Project</label>
+        							</p>
+        							<p>
+        								<input type="checkbox" id="startup" value="startup" />
+        								<label for="startup">Start-up</label>
+        							</p>
+        							<p>
+        								<input type="checkbox" id="gameofthrones" value="gameofthrones" />
+        								<label for="gameofthrones">Game of Thrones </label>
+        							</p>
+        							<p>
+        								<input type="checkbox" id="multiverse" value="multiverse" />
+        								<label for="multiverse">My notions about multiverse </label>
+        							</p>
+        							<p>
+        								<input type="checkbox" id="date" value="date" />
+        								<label for="date">Date </label>
+        							</p>
+        							<p>
+        								<input type="checkbox" id="other" value="other" />
+        								<label for="other">Other</label>
+        							</p>
+        						</div>
+        					</div>
+        					<p class="center-align">
+        						<button class="btn waves-effect waves-orange " type="submit"  style="background-color:#e0e0e0 ;color:black;" onclick="submitContact();">Submit
+        							<i class="material-icons right">send</i>
+        						</button>
+        					</p>
+        				</form>
+        				<P>OR</P>
+        				<p>
+        					<a href="mailto:sourabhdattawad@gmail.com" target="_top">sourabhdattawad@gmail
+        					</a>
+        				</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript">
+function a(){
+	console.log($('#' + 'job').is(":checked"))
+	
+
+}
+ $(document).ready(function(){
+
+    $('.modal-trigger').leanModal();
+    // $("input[type='checkbox']").val();
+    console.log($('input[type=checkbox]:checked'));
+  });
+
+
+
+</script>

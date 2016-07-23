@@ -1,0 +1,49 @@
+ <nav class="top-nav">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large  top-nav full  "><i class="material-icons">menu</i></a>
+    </div>
+  </div>
+</nav>
+
+
+{{!-- <p class="center-align">
+	<a class="waves-effect waves-light btn-large" href="/update/blog/post/create">Add a new Blog</a>
+</p> --}}
+<ul id="nav-mobile" class="side-nav ">
+  <li class="bold"><h3>Categories</h3></li>
+  <li class="search">
+    <nav>
+      <div class="nav-wrapper">
+        <form>
+          <div class="input-field">
+            <input placeholder="Search"id="search" type="search" style="background-color:white;" required >
+            <label for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </li>
+  <li class="bold"><a href="/update/blog/category/" class="waves-effect waves-teal">Add Category</a></li>
+  {{#each category}}
+  <li class="bold"><a href="/update/blog/{{name}}/" class="waves-effect waves-teal">{{name}}</a></li>
+  {{/each}}
+  
+</ul>
+{{#each blog}}
+ <div class="row">
+      <div class="container ">
+        <div class="card-panel white">
+        	<h4 class="left-align">{{title}}</h4>
+          <span class="black-text">
+          	{{description}}
+          </span>
+          <div class="row center-align">
+          	<a class="waves-effect waves-light btn">Read</a>
+          </div>
+          
+        </div>
+      </div>
+ </div>
+ {{/each}}

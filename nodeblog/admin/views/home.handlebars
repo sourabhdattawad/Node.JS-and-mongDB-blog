@@ -1,0 +1,123 @@
+{{> nav}}
+<div>
+<div class="row" id="about" >
+	<div class="container" style="height:570px">
+		<div class="row">
+      		<div class="center-align">
+       		   <div class="card-panel ">
+       		   	<span style="float:right"><a href="/update/about/">edit</a></span>
+        		<h4 class="left-align">About</h4>
+        		<hr style="border-color:#0d47a1 ;">
+
+        		<img class="responsive-img circle" src="{{user.img}}" style="height:200px">
+        		<h3 class="myname" style="color:#ff5252">Sourabh Dattawad</h3>
+        		<span class="blue-text">{{user.about}}
+        		</span>
+        	</div>
+        </div>
+    </div>
+</div>
+<div class="row" id="opensource" >
+	<div class="container" >
+		<div class="row">
+      		<div class="center-align">
+       		   <div class="">
+       		    <span style="float:right"><a href="/update/projects/">edit</a></span>
+        		<h4 class="left-align">Open Source & Projects</h4>
+        		<hr style="border-color:#0d47a1 ;">
+
+        		<ul class="collection ">
+		  		  {{#each projects}}
+		  		  	<li class="collection-item left-align">
+						  	<h3>{{title}} </h3>
+						  	<p>{{description}}</p>
+						  	<p>{{links}}</p>
+					</li>	  	
+		  		  {{/each}}
+	    		</ul>
+        	</div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="contact">
+	<div class="container" >
+		<div class="row">
+      		<div class="center-align">
+       		   <div class="card-panel ">
+        		<h4 class="left-align">Contact Me</h4>
+        		<hr style="border-color:#0d47a1 ;">
+        		  <div class="row">
+			    <form class="col s12">
+			    	<div class="row">
+
+			    	<div class="input-field col s6 " style="">
+			    		  <input value="" id="name" type="text" class="validate">
+			      			<label class="active left-align" for="name" >First Name</label>
+			    	</div>
+			    	<div class="input-field col s6 " style="">
+			    		  <input value="" id="email" type="email" class="validate">
+			      			<label class="active left-align" for="email" >Email</label>
+			    	</div>
+			    		<div class="input-field col s12">
+			    			<textarea value="" id="message" class="materialize-textarea"></textarea>
+          					<label for="message">Message</label>
+        				</div>
+    					<div class="col c12">
+			    		<h5>Lets talk about ?</h5>
+			    		<p>
+			    			<input class="checkbox-orange"type="checkbox" id="job" value="job"/>
+			    			<label for="job">Job</label>
+				    	</p>
+				    	<p>
+			    			<input type="checkbox" id="project" value="project" />
+			    			<label for="project">Project</label>
+				    	</p>
+				    	<p>
+			    			<input type="checkbox" id="startup" value="startup" />
+			    			<label for="startup">Start-up</label>
+				    	</p>
+				    	<p>
+			    			<input type="checkbox" id="gameofthrones" value="gameofthrones" />
+			    			<label for="gameofthrones">Game of Thrones </label>
+				    	</p>
+
+				    	<p>
+			    			<input type="checkbox" id="multiverse" value="multiverse" />
+			    			<label for="multiverse">My notions about multiverse </label>
+				    	</p>
+
+				    	<p>
+			    			<input type="checkbox" id="date" value="date" />
+			    			<label for="date">Date </label>
+				    	</p>
+				    	<p>
+			    			<input type="checkbox" id="other" value="other" />
+			    			<label for="other">Other</label>
+				    	</p>
+			    	  </div>    	
+			  	</div>
+			  		<a class="waves-effect waves-red btn-large" style="background-color:#0d47a1" onclick= "submitContact();">SUBMIT</a>
+			    </form>
+ 			  </div>
+        	</div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+function a(){
+	console.log($('#' + 'job').is(":checked"))
+	
+
+}
+ $(document).ready(function(){
+
+    $('.modal-trigger').leanModal();
+    // $("input[type='checkbox']").val();
+    console.log($('input[type=checkbox]:checked'));
+  });
+
+
+
+</script>
